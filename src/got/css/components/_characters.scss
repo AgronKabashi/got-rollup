@@ -1,0 +1,16 @@
+got-characters {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+
+  margin: auto;
+  //max-width: rem(1100);
+  width: 80%;
+
+  h3 {
+    display: block;
+    font-family: trajan;
+    font-size: rem(32);
+    width: 100%;
+  }
+}

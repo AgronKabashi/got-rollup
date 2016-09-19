@@ -1,0 +1,21 @@
+@import "reset";
+
+@font-face {
+  font-family: "got";
+  src: url('got.ttf');
+}
+
+@font-face {
+  font-family: "trajan";
+  src: url("trajan.woff") format("woff");
+}
+
+@font-face {
+  font-family: "trajanpro";
+  src: url("trajanpro.woff") format("woff");
+}
+
+html,
+body {
+  height: 100%;
+}

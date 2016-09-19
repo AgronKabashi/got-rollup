@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["es2015", {"modules": false}]
+  ],
+  "plugins": [
+    "external-helpers",
+    "angular2-annotations",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-flow-strip-types"
+  ]
+}

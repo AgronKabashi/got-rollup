@@ -1,0 +1,55 @@
+got-episode-cover {
+  background-color: black;
+  display: block;
+  height: rem(600);
+  padding-bottom: rem(15);
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .wrapper {
+    height: 100%;
+    left: 5%;
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+
+  .summary {
+    color: white;
+    display: inline-block;
+    font-family: trajan;
+    position: relative;
+    text-align: center;
+    text-shadow: rem(2) rem(2) rem(2) #000;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 50%;
+    text-transform: uppercase;
+  }
+
+  hr {
+    background-color: #72a05f;
+    border: none;
+    height: rem(2);
+    width: rem(100);
+  }
+
+  h1 {
+    font-weight: normal;
+    font-size: rem(22);
+    margin: rem(15) 0;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: rem(50);
+    margin: rem(8) 0 rem(62);
+  }
+}

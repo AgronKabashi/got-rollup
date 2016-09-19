@@ -1,0 +1,28 @@
+got-character {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+  margin: rem(5);
+  width: rem(198);
+  height: rem(260);
+  vertical-align: top;
+  margin-bottom: rem(5);
+
+  a {
+    color: #000;
+  }
+
+  img {
+    width: 100%;
+    height: rem(200);
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .summary {
+    display: inline-block;
+    font-family: trajanpro;
+    font-size: rem(20);
+    font-weight: bold;
+    padding: rem(10) rem(10);
+    width: 0; // Forces line break
+  }
+}

@@ -1,0 +1,54 @@
+got-navigation {
+  $nav-height: rem(50);
+
+  display: block;
+  font-family: trajan;
+  height: $nav-height;
+
+  .active {
+    background-color: #4e6f72;
+  }
+
+  img {
+    display: inline-block;
+    max-height: rem(25);
+    vertical-align: middle;
+  }
+
+  header {
+    background-color: #323232;
+    display: block;
+    height: $nav-height;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  menu {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+
+    &:hover nav {
+      display: block;
+    }
+  }
+
+  nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    width: 100%;
+    left: 0;
+  }
+
+  a {
+    color: white;
+    display: inline-block;
+    height: $nav-height;
+    line-height: $nav-height;
+    padding: 0 rem(10);
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,37 @@
+got-character-bio {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  left: 0;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  .card {
+    @include transform(translateY(-50%));
+    background-color: #fff;
+    border-radius: rem(3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+    min-height: rem(510);
+    margin: auto;
+    position: relative;
+    vertical-align: top;
+    width: rem(350);
+    top: 50%;
+  }
+
+  a {
+    line-height: 2rem;
+    display: block;
+  }
+
+  .summary {
+    display: block;
+    padding: rem(10);
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
