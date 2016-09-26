@@ -1,4 +1,5 @@
 # Game of Thrones Workshop
+Also look at https://github.com/AgronKabashi/got if you are interested in a gulp/browserify solution instead.
 
 ## How to get started
 1. Install NodeJS
