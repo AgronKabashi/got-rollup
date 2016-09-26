@@ -8,3 +8,6 @@ Also look at https://github.com/AgronKabashi/got if you are interested in a gulp
 1. Open http://localhost:8080
 
 Check scripts in `package.json` for other available tasks.
+
+## Configuration
+Look in the `config` section of `package.json` if you need to configure paths or filenames.
