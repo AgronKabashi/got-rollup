@@ -11,6 +11,7 @@ const packageJson = require("./package.json");
 const config = packageJson.config;
 
 export default {
+  context: "this",
   dest: config.build.appFile,
   entry: config.src.entrypoint,
   format: "iife",
