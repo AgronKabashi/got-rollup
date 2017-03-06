@@ -1,5 +1,6 @@
 import alias from "rollup-plugin-alias";
 import babel from "rollup-plugin-babel";
+import conditional from "rollup-plugin-conditional";
 import filesize from "rollup-plugin-filesize";
 import includePaths from "rollup-plugin-includepaths";
 import json from "rollup-plugin-json";
@@ -9,6 +10,7 @@ import neat from "node-neat";
 
 const packageJson = require("./package.json");
 const config = packageJson.config;
+const isProduction = false
 
 export default {
   context: "this",
@@ -22,14 +24,15 @@ export default {
     includePaths({
       paths: [config.src.folder]
     }),
-    json(),
-    nodeResolve({
-      jsnext: true,
-      module: true
+    babel({
+      exclude: [
+        "node_modules"
+      ]
     }),
-    babel(),
     filesize(),
-    //uglify()
+    conditional(isProduction, [
+      uglify()
+    ])
   ],
   external: Object.keys(packageJson.dependencies),
   globals: Object.keys(packageJson.dependencies)

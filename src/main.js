@@ -2,7 +2,7 @@ import {Component, enableProdMode, NgModule} from "@angular/core";
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic"; // includes compiler
 import {RouterModule} from "@angular/router";
 
-import GOTModule from "got";
+import GOTModule from "./got";
 
 //enableProdMode();
 

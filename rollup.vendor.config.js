@@ -1,10 +1,12 @@
 import alias from "rollup-plugin-alias";
 import buble from "rollup-plugin-buble";
+import conditional from "rollup-plugin-conditional";
 import filesize from "rollup-plugin-filesize";
 import nodeResolve from "rollup-plugin-node-resolve";
 import uglify from "rollup-plugin-uglify";
 
 const config = require("./package.json").config;
+const isProduction = false
 
 export default {
   context: "this",
@@ -22,6 +24,8 @@ export default {
     }),
     buble(),
     filesize(),
-    //uglify()
+    conditional(isProduction, [
+      uglify()
+    ])
   ]
 };

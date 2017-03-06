@@ -1,6 +1,6 @@
 {
   "name": "got-rollup",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "author": "Agron Kabashi",
   "license": "MIT",
@@ -23,15 +23,16 @@
     "start": "npm run clean -s && npm run build:staticfiles -s && npm run watch -s"
   },
   "dependencies": {
-    "@angular/common": "^2.0.0",
-    "@angular/compiler": "^2.0.0",
-    "@angular/core": "^2.0.0",
-    "@angular/http": "^2.0.0",
-    "@angular/platform-browser": "^2.0.0",
-    "@angular/platform-browser-dynamic": "^2.0.0",
-    "@angular/router": "^3.0.0",
+    "@angular/common": "^4.0.0-rc.2",
+    "@angular/compiler": "^4.0.0-rc.2",
+    "@angular/core": "^4.0.0-rc.2",
+    "@angular/http": "^4.0.0-rc.2",
+    "@angular/platform-browser": "^4.0.0-rc.2",
+    "@angular/platform-browser-dynamic": "^4.0.0-rc.2",
+    "@angular/router": "^4.0.0-rc.2",
+    "rxjs": "^5.2.0",
     "rxjs-es": "^5.0.0-beta.12",
-    "zone.js": "^0.6.23"
+    "zone.js": "^0.7.7"
   },
   "devDependencies": {
     "babel-plugin-angular2-annotations": "^5.1.0",
@@ -44,22 +45,23 @@
     "core-js": "^2.4.1",
     "eslint": "^3.5.0",
     "http-server": "^0.9.0",
-    "livereload": "^0.5.0",
+    "livereload": "^0.6.0",
     "node-bourbon": "^4.2.8",
-    "node-neat": "^1.7.2",
-    "node-sass": "^3.10.0",
+    "node-neat": "^2.0.0-beta.0",
+    "node-sass": "^4.5.0",
     "parallelshell": "^2.0.0",
     "reflect-metadata": "^0.1.8",
-    "rollup": "^0.36.0",
+    "rollup": "^0.41.4",
     "rollup-plugin-alias": "^1.2.0",
     "rollup-plugin-babel": "^2.6.1",
-    "rollup-plugin-buble": "^0.13.0",
-    "rollup-plugin-filesize": "^0.5.5",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-conditional": "^1.1.1",
+    "rollup-plugin-filesize": "^1.0.1",
     "rollup-plugin-includepaths": "^0.1.5",
     "rollup-plugin-json": "^2.0.2",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
-    "rollup-watch": "^2.5.0"
+    "rollup-watch": "^3.2.2"
   },
   "config": {
     "build": {
