@@ -1,7 +1,6 @@
-import {RouterModule} from "@angular/router";
 import * as components from "./components";
 
-export default RouterModule.forRoot([
+export default [
   {
     path: "",
     redirectTo: "season/1/episode/1",
@@ -21,4 +20,4 @@ export default RouterModule.forRoot([
       }
     ]
   }
-], {useHash: true});
+];

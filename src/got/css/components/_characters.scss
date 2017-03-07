@@ -1,7 +1,7 @@
 got-characters {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include justify-content(center);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   margin: auto;
   //max-width: rem(1100);

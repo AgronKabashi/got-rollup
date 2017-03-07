@@ -17,13 +17,14 @@
     "suppressImplicitAnyIndexErrors": true
   },
   "include": [
-    "src/**/*.js"
+    "src/**/*.js",
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules"
   ],
   "angularCompilerOptions": {
-    "genDir": "app/aot",
+    "genDir": "src/aot",
     "skipMetadataEmit": true
   }
 }

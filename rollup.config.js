@@ -3,14 +3,11 @@ import babel from "rollup-plugin-babel";
 import conditional from "rollup-plugin-conditional";
 import filesize from "rollup-plugin-filesize";
 import includePaths from "rollup-plugin-includepaths";
-import json from "rollup-plugin-json";
-import nodeResolve from 'rollup-plugin-node-resolve';
 import uglify from "rollup-plugin-uglify";
-import neat from "node-neat";
 
 const packageJson = require("./package.json");
 const config = packageJson.config;
-const isProduction = false
+const isProduction = false;
 
 export default {
   context: "this",
@@ -29,7 +26,9 @@ export default {
         "node_modules"
       ]
     }),
-    filesize(),
+    filesize({
+      render: (options, size, gzip) => `\x1b[32mApplication bundle size: \x1b[33m${size}\x1b[32m, Gzipped size: \x1b[33m${gzip}\x1b[0m`
+    }),
     conditional(isProduction, [
       uglify()
     ])
@@ -37,7 +36,7 @@ export default {
   external: Object.keys(packageJson.dependencies),
   globals: Object.keys(packageJson.dependencies)
     .reduce((result, key) => {
-      result[key] = `${config.vendor.moduleName}.${key.replace(/[@\-\/\.]/g, '_')}`;
+      result[key] = `${config.vendor.moduleName}.${key.replace(/[@\-\/\.]/g, "_")}`;
       return result;
     }, {})
 };

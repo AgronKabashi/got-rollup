@@ -4,7 +4,7 @@ import {RouterModule} from "@angular/router";
 
 import GOTModule from "./got";
 
-//enableProdMode();
+// enableProdMode();
 
 @Component({
   selector: "got-app",
@@ -16,6 +16,7 @@ class AppComponent {}
   bootstrap: [AppComponent],
   declarations: [AppComponent],
   imports: [
+    RouterModule.forRoot([], {useHash: true}),
     GOTModule,
     RouterModule
   ]

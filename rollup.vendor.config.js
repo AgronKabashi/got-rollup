@@ -6,7 +6,7 @@ import nodeResolve from "rollup-plugin-node-resolve";
 import uglify from "rollup-plugin-uglify";
 
 const config = require("./package.json").config;
-const isProduction = false
+const isProduction = false;
 
 export default {
   context: "this",
@@ -23,7 +23,9 @@ export default {
       module: true
     }),
     buble(),
-    filesize(),
+    filesize({
+      render: (options, size, gzip) => `\x1b[32mVendor bundle size: \x1b[33m${size}\x1b[32m, Gzipped size: \x1b[33m${gzip}\x1b[0m`
+    }),
     conditional(isProduction, [
       uglify()
     ])

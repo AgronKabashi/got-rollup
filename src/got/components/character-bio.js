@@ -1,7 +1,7 @@
 import {Component, Input} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 
-import {CharacterBioService} from "got/services/character-bio";
+import {CharacterBioService} from "../services/character-bio";
 
 @Component({
   selector: "got-character-bio",

@@ -1,4 +1,6 @@
-@import "bourbon";
+@function rem($pixels) {
+  @return #{$pixels / 16}rem;
+}
 
 @import
   "components/character",
